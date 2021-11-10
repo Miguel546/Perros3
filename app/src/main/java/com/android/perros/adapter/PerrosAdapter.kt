@@ -63,8 +63,7 @@ class PerrosAdapter(val clickListener: ItemSelectedListener,
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = getItem(position)
-        val put = this@PerrosAdapter.lifecycleOwner
-        holder.bind(item, position, clickListener, clickPosicionListener, viewModel2, put)
+        holder.bind(item, position, clickListener, clickPosicionListener, viewModel2, lifecycleOwner)
     }
 
 }
